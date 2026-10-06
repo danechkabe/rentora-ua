@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Філіп Апартмент",
-    "notice": "Демонстраційні оголошення: замініть фото, адресу й координати на перевірені дані перед публікацією.",
+    "notice": "Деякі умови позначені як такі, що потребують уточнення. Уточніть їх у Філіпа перед домовленістю.",
     "contact": {
       "name": "Філіп",
       "phone": "+351 913 805 738",
@@ -12,147 +12,196 @@
   },
   "apartments": [
     {
-      "id": "apt-podil",
-      "title": "Квартира 01",
-      "isDemo": true,
-      "district": "Демонстраційний район · Київ",
-      "address": "Демонстраційна вулиця, Київ",
-      "coordinates": [50.4661, 30.5147],
-      "bathrooms": 1,
-      "roomsForRent": 2,
-      "roomIds": ["room-sun", "room-calm"],
-      "photos": ["https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=85"]
+      "id": "apt-edison",
+      "title": "Квартира · Rua Edison",
+      "district": "Areeiro · Lisboa",
+      "address": "R. Edison 4, 1000-143 Lisboa, Португалія",
+      "coordinates": [
+        38.7444842,
+        -9.1382277
+      ],
+      "bathrooms": null,
+      "roomsForRent": 5,
+      "roomIds": [
+        "room-edison-01",
+        "room-edison-02"
+      ],
+      "photos": [
+        "images/listings/room-01-02.jpg"
+      ]
     },
     {
-      "id": "apt-obolon",
-      "title": "Квартира 02",
-      "isDemo": true,
-      "district": "Демонстраційний район · Київ",
-      "address": "Демонстраційна вулиця, Київ",
-      "coordinates": [50.5198, 30.4986],
-      "bathrooms": 2,
-      "roomsForRent": 2,
-      "roomIds": ["room-studio", "room-window"],
-      "photos": ["https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1600&q=85"]
+      "id": "apt-cordoeiros",
+      "title": "Квартира · Rua dos Cordoeiros",
+      "district": "Santa Catarina · Lisboa",
+      "address": "Rua dos Cordoeiros 52, 1200-012 Lisboa, Португалія",
+      "coordinates": [
+        38.7093527,
+        -9.1479401
+      ],
+      "bathrooms": null,
+      "roomsForRent": null,
+      "roomIds": [
+        "room-cordoeiros-03",
+        "room-cordoeiros-04",
+        "room-cordoeiros-05"
+      ],
+      "photos": [
+        "images/listings/room-03-01.jpg"
+      ]
     }
   ],
   "rooms": [
     {
-      "id": "room-sun",
+      "id": "room-edison-01",
       "type": "room",
-      "apartmentId": "apt-podil",
-      "title": "Кімната 01 · Сонячна",
-      "isDemo": true,
-      "description": "Світла демонстраційна кімната з робочим місцем і великим вікном.",
-      "status": "available",
-      "price": 12500,
-      "currency": "грн/міс",
-      "deposit": 12500,
-      "address": "Демонстраційна вулиця, Київ",
-      "coordinates": [50.4661, 30.5147],
-      "floor": "4 поверх",
-      "bathroomType": "Спільна вбиральня",
-      "bathrooms": 1,
-      "utilitiesIncluded": false,
-      "contract": true,
-      "washingMachine": true,
-      "fridge": "Спільний холодильник",
-      "bathroomFixture": "Душ",
-      "smokingAllowed": false,
-      "petsAllowed": false,
-      "photos": [
-        "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85"
-      ]
-    },
-    {
-      "id": "room-calm",
-      "type": "room",
-      "apartmentId": "apt-podil",
-      "title": "Кімната 02 · Тиха",
-      "isDemo": true,
-      "description": "Демонстраційна тиха кімната у квартирі зі спільною кухнею та терасою.",
+      "apartmentId": "apt-edison",
+      "title": "Кімната 01 · Rua Edison",
+      "description": "Кімната розміром 4 × 2 м із власною ванною кімнатою. Кухня, холодильник і пральна машина спільні.",
       "status": "upcoming",
-      "availableFrom": "1 листопада 2026",
-      "price": 10900,
-      "currency": "грн/міс",
-      "deposit": 10900,
-      "address": "Демонстраційна вулиця, Київ",
-      "coordinates": [50.4661, 30.5147],
+      "availableFrom": "1 грудня 2026",
+      "price": 500,
+      "currency": "€/міс",
+      "deposit": 500,
+      "address": "R. Edison 4, 1000-143 Lisboa, Португалія",
+      "coordinates": [
+        38.7444842,
+        -9.1382277
+      ],
+      "floor": "3 поверх",
+      "bathroomType": "Власна вбиральня",
+      "bathrooms": null,
+      "utilitiesIncluded": null,
+      "contract": null,
+      "washingMachine": "Спільна пральна машина",
+      "fridge": "Спільний холодильник",
+      "bathroomFixture": "Власна ванна кімната",
+      "smokingAllowed": null,
+      "petsAllowed": null,
+      "photos": [
+        "images/listings/room-01-01.jpg",
+        "images/listings/room-01-02.jpg",
+        "images/listings/room-01-03.jpg",
+        "images/listings/room-01-04.jpg"
+      ]
+    },
+    {
+      "id": "room-edison-02",
+      "type": "room",
+      "apartmentId": "apt-edison",
+      "title": "Кімната 02 · Rua Edison",
+      "description": "Кімната у квартирі на 3 поверсі. Кухня, холодильник, пральна машина та вбиральня спільні. Вбиральнею користується ще одна кімната.",
+      "status": "available",
+      "price": 600,
+      "currency": "€/міс",
+      "deposit": 600,
+      "address": "R. Edison 4, 1000-143 Lisboa, Португалія",
+      "coordinates": [
+        38.7444842,
+        -9.1382277
+      ],
+      "floor": "3 поверх",
+      "bathroomType": "Спільна вбиральня (ще з однією кімнатою)",
+      "bathrooms": null,
+      "utilitiesIncluded": null,
+      "contract": null,
+      "washingMachine": "Спільна пральна машина",
+      "fridge": "Спільний холодильник",
+      "bathroomFixture": "Потрібно уточнити",
+      "smokingAllowed": null,
+      "petsAllowed": true,
+      "photos": [
+        "images/listings/room-02-01.jpg",
+        "images/listings/room-02-02.jpg"
+      ]
+    },
+    {
+      "id": "room-cordoeiros-03",
+      "type": "room",
+      "apartmentId": "apt-cordoeiros",
+      "title": "Кімната 03 · Rua dos Cordoeiros",
+      "description": "Кімната на 4 поверсі. Вбиральня, кухня, холодильник і пральна машина спільні. Можна з тваринами.",
+      "status": "available",
+      "price": 650,
+      "currency": "€/міс",
+      "deposit": 650,
+      "address": "Rua dos Cordoeiros 52, 1200-012 Lisboa, Португалія",
+      "coordinates": [
+        38.7093527,
+        -9.1479401
+      ],
       "floor": "4 поверх",
       "bathroomType": "Спільна вбиральня",
-      "bathrooms": 1,
-      "utilitiesIncluded": true,
-      "contract": true,
-      "washingMachine": true,
+      "bathrooms": null,
+      "utilitiesIncluded": null,
+      "contract": null,
+      "washingMachine": "Спільна пральна машина",
       "fridge": "Спільний холодильник",
-      "bathroomFixture": "Ванна",
-      "smokingAllowed": false,
+      "bathroomFixture": "Потрібно уточнити",
+      "smokingAllowed": null,
       "petsAllowed": true,
       "photos": [
-        "https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85"
+        "images/listings/room-03-01.jpg",
+        "images/listings/room-03-02.jpg",
+        "images/listings/room-03-03.jpg"
       ]
     },
     {
-      "id": "room-studio",
+      "id": "room-cordoeiros-04",
       "type": "room",
-      "apartmentId": "apt-obolon",
-      "title": "Кімната 03 · Студія",
-      "isDemo": true,
-      "description": "Демонстраційна кімната з робочою зоною та зручним спільним простором.",
-      "status": "occupied",
-      "price": 11800,
-      "currency": "грн/міс",
-      "deposit": 11800,
-      "address": "Демонстраційна вулиця, Київ",
-      "coordinates": [50.5198, 30.4986],
-      "floor": "9 поверх",
+      "apartmentId": "apt-cordoeiros",
+      "title": "Кімната 04 · Rua dos Cordoeiros",
+      "description": "Кімната на 4 поверсі. Вбиральня, кухня, холодильник і пральна машина спільні. Можна з тваринами. Перше фото цієї кімнати ще очікується.",
+      "status": "available",
+      "price": 500,
+      "currency": "€/міс",
+      "deposit": 650,
+      "address": "Rua dos Cordoeiros 52, 1200-012 Lisboa, Португалія",
+      "coordinates": [
+        38.7093527,
+        -9.1479401
+      ],
+      "floor": "4 поверх",
       "bathroomType": "Спільна вбиральня",
-      "bathrooms": 2,
-      "utilitiesIncluded": false,
-      "contract": true,
-      "washingMachine": true,
-      "fridge": "Особистий холодильник",
-      "bathroomFixture": "Душ",
-      "smokingAllowed": false,
-      "petsAllowed": false,
+      "bathrooms": null,
+      "utilitiesIncluded": null,
+      "contract": null,
+      "washingMachine": "Спільна пральна машина",
+      "fridge": "Спільний холодильник",
+      "bathroomFixture": "Потрібно уточнити",
+      "smokingAllowed": null,
+      "petsAllowed": true,
       "photos": [
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1600&q=85"
+        "images/listings/room-03-02.jpg",
+        "images/listings/room-03-03.jpg"
       ]
     },
     {
-      "id": "room-window",
+      "id": "room-cordoeiros-05",
       "type": "room",
-      "apartmentId": "apt-obolon",
-      "title": "Кімната 04 · Панорамне вікно",
-      "isDemo": true,
-      "description": "Демонстраційна кімната з панорамним вікном у квартирі для спільного проживання.",
-      "status": "occupied",
-      "price": 13200,
-      "currency": "грн/міс",
-      "deposit": 13200,
-      "address": "Демонстраційна вулиця, Київ",
-      "coordinates": [50.5198, 30.4986],
-      "floor": "9 поверх",
-      "bathroomType": "Власна вбиральня",
-      "bathrooms": 2,
-      "utilitiesIncluded": true,
-      "contract": false,
-      "washingMachine": true,
+      "apartmentId": "apt-cordoeiros",
+      "title": "Кімната 05 · Rua dos Cordoeiros",
+      "description": "Кімната на 4 поверсі. Вбиральня, кухня, холодильник і пральна машина спільні. Можна з тваринами. Фото та ціну ще потрібно уточнити.",
+      "status": "available",
+      "price": null,
+      "currency": "€/міс",
+      "deposit": null,
+      "address": "Rua dos Cordoeiros 52, 1200-012 Lisboa, Португалія",
+      "coordinates": [
+        38.7093527,
+        -9.1479401
+      ],
+      "floor": "4 поверх",
+      "bathroomType": "Спільна вбиральня",
+      "bathrooms": null,
+      "utilitiesIncluded": null,
+      "contract": null,
+      "washingMachine": "Спільна пральна машина",
       "fridge": "Спільний холодильник",
-      "bathroomFixture": "Ванна",
-      "smokingAllowed": false,
+      "bathroomFixture": "Потрібно уточнити",
+      "smokingAllowed": null,
       "petsAllowed": true,
-      "photos": [
-        "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=1600&q=85",
-        "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=85"
-      ]
+      "photos": []
     }
   ]
 }

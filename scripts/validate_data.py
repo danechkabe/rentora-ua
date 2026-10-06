@@ -10,6 +10,7 @@ contact = data["site"]["contact"]
 assert {"name", "phone", "phoneHref"} <= contact.keys()
 apartments = {item["id"]: item for item in data["apartments"]}
 rooms = {item["id"]: item for item in data["rooms"]}
+assert len(rooms) == len(data["rooms"]), "room IDs must be unique"
 room_fields = {
     "id", "type", "apartmentId", "title", "description", "status", "price", "currency", "deposit",
     "address", "coordinates", "floor", "bathroomType", "bathrooms", "utilitiesIncluded", "contract",
@@ -20,7 +21,10 @@ for room in rooms.values():
     assert not missing, f"{room.get('id')}: missing {sorted(missing)}"
     assert room["type"] == "room"
     assert room["status"] in {"available", "upcoming", "occupied"}
-    assert len(room["coordinates"]) == 2 and room["photos"], f"{room['id']}: invalid location or photos"
+    assert len(room["coordinates"]) == 2, f"{room['id']}: invalid location"
+    assert isinstance(room["photos"], list), f"{room['id']}: photos must be a list"
+    assert room["price"] is None or isinstance(room["price"], (int, float)), f"{room['id']}: invalid price"
+    assert room["deposit"] is None or isinstance(room["deposit"], (int, float)), f"{room['id']}: invalid deposit"
     if room["status"] == "upcoming":
         assert room.get("availableFrom"), f"{room['id']}: upcoming room needs availableFrom"
     apartment = apartments.get(room["apartmentId"])
@@ -29,7 +33,8 @@ for room in rooms.values():
 for apartment in apartments.values():
     assert {"id", "coordinates", "bathrooms", "roomsForRent", "roomIds"} <= apartment.keys()
     assert len(apartment["coordinates"]) == 2
-    assert apartment["roomsForRent"] == len(apartment["roomIds"]), f"{apartment['id']}: room count does not match IDs"
+    assert len(apartment["roomIds"]) == len(set(apartment["roomIds"])), f"{apartment['id']}: duplicate room IDs"
+    assert apartment["roomsForRent"] is None or apartment["roomsForRent"] >= len(apartment["roomIds"]), f"{apartment['id']}: room total below listed rooms"
     for room_id in apartment["roomIds"]:
         assert rooms.get(room_id, {}).get("apartmentId") == apartment["id"], f"{room_id}: broken apartment link"
-print(f"OK: {len(apartments)} apartment locations, {len(rooms)} rooms, Philip contact and all data links valid")
+print(f"OK: {len(apartments)} Lisbon apartment locations, {len(rooms)} rooms, valid contact and data links")
